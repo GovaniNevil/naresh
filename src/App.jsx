@@ -7,21 +7,21 @@ import About from './pages/about';
 import Quality from './pages/quality';
 import Contactus from './pages/contactus';
 import Products from './pages/products';
+import Header from './componants/Header';
 
 function App() {
   return (
     <Router>
-      <div className='border-black'>
-        <div className='text-center'>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/Quality" element={<Quality />} />
-            <Route path="/Contactus" element={<Contactus />} />
-            <Route path="/Products" element={<Products />} />
-          </Routes>
-        </div>
-      </div>
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/Quality" element={<Quality />} />
+          <Route path="/Contactus" element={<Contactus />} />
+          <Route path="/Products" element={<Products />} />
+        </Routes>
+      </main>
     </Router>
   );
 }
